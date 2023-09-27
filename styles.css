@@ -7,6 +7,29 @@ body {
 div.a {
   width: 600px;  
   margin: auto;
+
+}
+
+div.b {
+  width: 175px;  
+  margin: auto;
+  margin-top: 75px;
+}
+
+div.c {
+
+  margin: 15px
+}
+
+a.hyperlink {
+  
+  text-decoration: none;
+  color: inherit;
+}
+
+a.hyperlink:hover {
+
+  text-decoration: underline;
 }
 
 p.a {
@@ -22,11 +45,13 @@ ul.b {
   list-style-type: none;
   margin: 0;
   padding: 0;
+
 }
 
 li.b {
   display: inline-block;
   margin-right: 20px;
+
 }
 
 .btn {
@@ -55,7 +80,11 @@ li.b {
   margin: 0;
   position: absolute;
   top: 50%;
-  left: 45%;
+  left: 44%;
   -ms-transform: translateY(-50%, -50%);
   transform: translateY(-50%, -50%);
+}
+
+#content {
+  position:relative;
 }
