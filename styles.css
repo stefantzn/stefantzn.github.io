@@ -21,16 +21,18 @@ div.c {
   margin: 15px
 }
 
+
 a.hyperlink {
   
   text-decoration: none;
-  color: inherit;
+  color: beige;
 }
 
 a.hyperlink:hover {
 
   text-decoration: underline;
 }
+
 
 p.a {
   text-align: center;
