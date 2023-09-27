@@ -10,10 +10,10 @@ div.a {
 
 }
 
-div.b {
-  width: 175px;  
+div.b { 
   margin: auto;
-  margin-top: 75px;
+  margin-top: 20px;
+  text-align: center;
 }
 
 div.c {
@@ -73,20 +73,8 @@ li.b {
 }
 
 .container {
+  text-align: center;
   height: 100px;
   position: relative;
   border: none
-}
-
-.vertical-center {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 44%;
-  -ms-transform: translateY(-50%, -50%);
-  transform: translateY(-50%, -50%);
-}
-
-#content {
-  position:relative;
 }
