@@ -4,8 +4,18 @@ body {
   color: beige;
 }
 
+div.a {
+  width: 600px;  
+  margin: auto;
+}
+
+p.a {
+  text-align: center;
+}
+
 h1.a {
   font-size: 75px;
+  text-align: center;
 }
 
 ul.b {
@@ -19,11 +29,33 @@ li.b {
   margin-right: 20px;
 }
 
-ul.a {
-  list-style-type: circle;
+.btn {
+
+  background-color: beige;
+  border: none;
+  color: grey;
+  padding: 20px;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: FreeMono, monospace, Helvetica, Arial, sans-serif;
+  border-radius: 50px;
 }
 
-ul.a {
-  text-align: center;
-  list-style-position: inside;
+.btn:hover {
+  background-color: rgb(192, 173, 156);
+}
+
+.container {
+  height: 100px;
+  position: relative;
+  border: none
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  -ms-transform: translateY(-50%, -50%);
+  transform: translateY(-50%, -50%);
 }
