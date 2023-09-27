@@ -23,14 +23,13 @@ div.c {
 
 
 a.hyperlink {
-  
-  text-decoration: none;
+
   color: beige;
 }
 
 a.hyperlink:hover {
 
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 
