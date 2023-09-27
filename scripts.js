@@ -4,7 +4,7 @@ function downloadResume() {
     link.href = "Stefan_Tuczynski_Resume.pdf"; // Replace with the actual file name and extension
     link.download = "Stefan Tuczynski Resume.pdf"; // You can specify the desired download file name
 
-    // Click the link to trigger the download
+    // Click the link to trigger the download 
     link.click();
 }
 
