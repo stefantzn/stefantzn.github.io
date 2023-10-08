@@ -9,7 +9,7 @@ function App() {
         <link rel="icon" type="image/x-icon" href="favicon.ico?" />
         <h1 className="a">Hey there! 👋</h1>
         <div className="a">
-          <p className="a">My name is Stefan.</p>
+          <p className="a">My name is Stefan</p>
           <p>I'm currently a 1st year Computer Engineering student at the University of Waterloo with a passion for technology.</p>
           <p>Right now I'm probably studying, working on something, or just simply brushing up on my Japanese. </p>
           <p>I have experience working with Java, C++, and Python for backend applications, HTML, CSS, and Javascript for front end applications.</p>
