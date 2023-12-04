@@ -38,6 +38,7 @@
       "last 1 safari version"
     ]
   },
+  "hompage": "https://stefantzn.github.io/",
   "devDependencies": {
     "gh-pages": "^6.0.0"
   }
