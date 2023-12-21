@@ -1,10 +1,10 @@
 # stefantuczynski.com
 
-This is my personal website I created using React.js, Javascript, CSS, and HTML. You can take a look at it [here](https://stefantuczynski.com)!
+This is my personal website I created using React.js, Next,js, and Tailwind CSS. You can take a look at it [here](https://stefantuczynski.com)!
 
 ## Gallery
 
-Current look as of 11/11/2023
+Current look as of 12/21/2023
 
 ![home](home.png)
 
