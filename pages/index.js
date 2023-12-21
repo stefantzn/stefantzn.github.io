@@ -1,41 +1,66 @@
-import React, { Component }  from 'react';
+import React, { useState, useEffect } from 'react';
+import Navbar from '../components/Navbar.js';
+import LoadingPage from '../components/LoadingPage.js';
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { IoIosMail } from "react-icons/io";
 
-export default function App() {
-  
-  const openPDFViewer = () => {
-    const newWindow = window.open('/resume.pdf', '_blank');
-    if (newWindow) {
-      newWindow.document.write('<iframe src="/resume.pdf" width="100%" height="100%"></iframe>');
-    } else {
-      console.error('Unable to open a new window or tab.');
-    }
-  };
+const App = () => {
+  const [loading, setLoading] = useState(true);
 
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+
+    return () => clearTimeout(timeout);
+  }, []);
 
   return (
-      <div>
-        <link rel="icon" type="image/x-icon" href="favicon.ico?" />
-        <h1 className="a">Hey there! 👋</h1>
-        <div className="a">
-          <p className="a">My name is Stefan</p>
-          <p>I'm currently a 1st year Computer Engineering student at the University of Waterloo with a passion for technology.</p>
-          <p>Right now I'm probably studying, working on something, or just simply brushing up on my Japanese. </p>
-          <p>I have experience working with Java, C++, and Python for backend applications, HTML, CSS, and Javascript for front end applications.</p>
-          <p>Sometimes I play around with microcontroller systems too.</p>
-          <p />
-        </div>
-        <br /><br />
-        <div className="container">
-          <button className="btn" id="downloadbutton" onClick={openPDFViewer}>Download CV</button>
-        </div>
-        <div className="b">
-          <a href="https://www.linkedin.com/in/stefan-tuczynski/" className="hyperlink">LinkedIn</a>
-          <a> </a>
-          <a href="https://github.com/stefantzn" className="hyperlink">GitHub</a>
-          <a> </a>
-          <a href="mailto:tuczynskis@gmail.com" className="hyperlink">Email</a>
-        </div>
-      </div>
+    <div>
+      {loading ? (
+        <LoadingPage color="#FFFFFF" />
+      ) : (
+        <ContentWithFadeIn />
+      )}
+    </div>
   );
-}
+};
 
+const ContentWithFadeIn = () => {
+  const [fadeIn, setFadeIn] = useState(false);
+
+  useEffect(() => {
+    // Set fade-in to true after a short delay
+    const fadeInTimeout = setTimeout(() => {
+      setFadeIn(true);
+    }, 500); // Adjust the delay based on your preference
+
+    return () => clearTimeout(fadeInTimeout);
+  }, []);
+
+  return (
+    <div className={`transition-opacity ${fadeIn ? 'opacity-100' : 'opacity-0'}`}>
+      <Navbar />
+
+      {/* Your additional content */}
+      <div className="text-white flex flex-col items-center justify-center h-screen">
+        <h1 className="text-6xl font-bold mb-4">Stefan Tuczynski</h1>
+        <p className="text-lg text-center">Computer Engineering Student @ University of Waterloo</p>
+      </div>
+
+      <div className="flex items-center justify-center fixed bottom-8 left-1/2 transform -translate-x-1/2 space-x-10">
+        <a href="https://www.linkedin.com/in/stefan-tuczynski/" target="_blank" rel="noopener noreferrer">
+          <FaLinkedin size={40} color="#0077b5" /> {/* Adjust size and color as needed */}
+        </a>
+        <a href="https://github.com/stefantzn" target="_blank" rel="noopener noreferrer">
+          <FaGithub size={40} color="#FFFFFF" /> {/* Adjust size and color as needed */}
+        </a>
+        <a href="mailto:tuczynskis@gmail.com" target="_blank" rel="noopener noreferrer">
+          <IoIosMail size={40} color="#FFFFFF" /> {/* Adjust size and color as needed */}
+        </a>
+      </div>
+    </div>
+  );
+};
+
+export default App;

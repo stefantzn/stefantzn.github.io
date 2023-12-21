@@ -1,4 +1,6 @@
-import '/styles/globals.css'
+import '../styles/globals.css'
+
+
 import { useEffect } from 'react';
 
 export default function MyApp({ Component, pageProps }) {
@@ -7,6 +9,10 @@ export default function MyApp({ Component, pageProps }) {
     // Your global side effects here
   }, []);
 
-  return <Component {...pageProps} />;
+  return (
+    <>
+      <Component {...pageProps} />
+    </>
+  );
 }
 
