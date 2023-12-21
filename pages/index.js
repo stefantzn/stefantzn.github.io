@@ -1,15 +1,16 @@
 import React, { Component }  from 'react';
 
-function App() {
-
+export default function App() {
+  
   const openPDFViewer = () => {
-    const newWindow = window.open('/pdf', '_blank');
+    const newWindow = window.open('/resume.pdf', '_blank');
     if (newWindow) {
       newWindow.document.write('<iframe src="/resume.pdf" width="100%" height="100%"></iframe>');
     } else {
       console.error('Unable to open a new window or tab.');
     }
   };
+
 
   return (
       <div>
@@ -38,4 +39,3 @@ function App() {
   );
 }
 
-export default App;
