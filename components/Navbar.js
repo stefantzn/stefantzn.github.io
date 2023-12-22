@@ -13,19 +13,19 @@ const Navbar = () => {
     },
     {
       id: 2,
-      link: "/resume.pdf", // Update the link to point to your resume PDF
-      label: "Resume",
-      external: true, // Indicate that it's an external link
+      link: "about",
+      label: "About",
     },
     {
       id: 3,
-      link: "experience",
-      label: "Experience",
+      link: "blog",
+      label: "Blog",
     },
     {
       id: 4,
-      link: "blog",
-      label: "Blog",
+      link: "/resume.pdf", // Update the link to point to your resume PDF
+      label: "Resume",
+      external: true, // Indicate that it's an external link
     },
   ];
 
