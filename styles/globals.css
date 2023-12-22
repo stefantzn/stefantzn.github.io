@@ -7,3 +7,15 @@ body {
   font-family: FreeMono, monospace, Helvetica, Arial, sans-serif;
   color: beige;
 }
+
+@keyframes vibrant-glow {
+  0% {
+      box-shadow: 0 0 5px #8ff;
+  }
+  50% {
+      box-shadow: 0 0 20px 5px #ba8ffbdf;
+  }
+  100% {
+      box-shadow: 0 0 5px #ffe7abf3;
+  }
+}

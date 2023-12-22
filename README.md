@@ -4,7 +4,7 @@ This is my personal website I created using React.js, Next,js, and Tailwind CSS.
 
 ## Gallery
 
-Current look as of 12/21/2023
+Current look as of 12/22/2023
 
 ![home](home.png)
 

@@ -50,7 +50,7 @@ const ContentWithFadeIn = () => {
       <Navbar />
       {/* Your additional content */}
       <div className="text-white flex flex-col items-center justify-center h-screen">
-        <h1 className="text-6xl font-bold mb-4">Stefan Tuczynski</h1>
+        <h1 className="text-6xl font-bold mb-4 text-center">Stefan Tuczynski</h1>
         <p className="text-lg text-center">Computer Engineering Student @ University of Waterloo</p>
         <div className="mt-10">
         <Typed
