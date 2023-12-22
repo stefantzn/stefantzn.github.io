@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar.js';
 import LoadingPage from '../components/LoadingPage.js';
+import ParticleContainer from '../components/Particles.js'; // Import the ParticleContainer component
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 
@@ -39,9 +40,12 @@ const ContentWithFadeIn = () => {
   }, []);
 
   return (
-    <div className={`transition-opacity ${fadeIn ? 'opacity-100' : 'opacity-0'}`}>
+    <div
+      className={`opacity-0 ${fadeIn ? 'opacity-100' : ''}`}
+      style={{ transition: 'opacity 1s ease-in-out' }}
+    > 
+      <ParticleContainer /> 
       <Navbar />
-
       {/* Your additional content */}
       <div className="text-white flex flex-col items-center justify-center h-screen">
         <h1 className="text-6xl font-bold mb-4">Stefan Tuczynski</h1>
