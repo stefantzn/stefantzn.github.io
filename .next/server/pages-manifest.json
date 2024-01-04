@@ -3,6 +3,6 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/about": "pages/about.js",
-  "/blog/first-term": "pages/blog/first-term.js",
-  "/blog": "pages/blog.js"
+  "/blog": "pages/blog.js",
+  "/blog/first-term": "pages/blog/first-term.js"
 }
