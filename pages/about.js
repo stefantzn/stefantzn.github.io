@@ -1,9 +1,13 @@
 import Navbar from '../components/Navbar';
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet';
 
 const About = () => {
   return (
     <div>
+      <Helmet>
+        <title>About</title>
+      </Helmet>
       <Navbar />
 
       <div className="flex flex-col md:flex-row items-center justify-center min-h-screen p-4">

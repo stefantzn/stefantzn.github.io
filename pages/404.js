@@ -1,8 +1,12 @@
 import Navbar from '../components/Navbar';
+import { Helmet } from 'react-helmet';
 
 const fourofour = () => {
   return (
     <div className="flex flex-col min-h-screen">
+      <Helmet>
+        <title>Error 404</title>
+      </Helmet>
       <Navbar />
       <div className="flex flex-col items-center justify-center flex-grow">
         <div className="text-center text-white">

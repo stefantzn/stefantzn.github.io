@@ -6,6 +6,7 @@ import { FaLinkedin, FaGithub, FaSpotify } from 'react-icons/fa';
 import { IoIosMail } from 'react-icons/io';
 import { LuInstagram } from 'react-icons/lu';
 import Typed from 'react-typed';
+import { Helmet } from 'react-helmet';
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -52,10 +53,15 @@ const ContentWithFadeIn = ({ isFirstVisit }) => {
   }, [isFirstVisit]);
 
   return (
+    
     <div
       className={`opacity-0 ${fadeIn ? 'opacity-100' : ''}`}
       style={{ transition: 'opacity 1s ease-in-out' }}
     >
+      <Helmet>
+        <title>Stefan Tuczynski</title>
+      </Helmet>
+
       <ParticleContainer />
       <Navbar fadeIn={isFirstVisit === 'false'} />
       {/* Your additional content */}
