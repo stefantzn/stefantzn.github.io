@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Navbar from '../../components/Navbar';
 import { Helmet } from 'react-helmet';
-import Image from 'next/image'
+
 
 const FirstTerm = () => {
   const [scrolling, setScrolling] = useState(false);
@@ -65,7 +65,7 @@ const FirstTerm = () => {
         initial="hidden"
         animate="visible"
       >
-        <Image
+        <img
           src="/nightsky.jpeg"
           alt="Night Sky"
           width={500}
@@ -167,7 +167,7 @@ const FirstTerm = () => {
         initial="hidden"
         animate="visible"
       >
-        <Image
+        <img
           src="/hackathonteam.jpeg"
           alt="Hackathon Team"
           width={500}
@@ -251,11 +251,9 @@ const FirstTerm = () => {
         initial="hidden"
         animate="visible"
       >
-        <Image
+        <img
           src="/ece150.jpg"
           alt="ECE150 Meme"
-          width={500}
-          height={500}
         />
       </motion.div>
 

@@ -2,7 +2,6 @@ import Navbar from '../components/Navbar';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet';
 import Link from 'next/link';
-import Image from 'next/image'
 
 const Blog = () => {
 
@@ -43,12 +42,10 @@ const Blog = () => {
                 <h2 className="text-xl font-bold mb-4">Reflection on 1A</h2>
                 <h2 className="text-sm font-bold mb-4">1/3/2024 • 5 min</h2>
                 <div className="mb-4">
-                  <Image 
+                  <img
                   src={'/ece1a.jpg'} 
                   alt="ECE Picture" 
                   className="w-full h-auto rounded-md" 
-                  width="400"
-                  height="400"
                   />
                 </div>
                 <p className="text-sm mb-4">

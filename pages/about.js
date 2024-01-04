@@ -1,7 +1,7 @@
 import Navbar from '../components/Navbar';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet';
-import Image from 'next/image'
+
 
 const About = () => {
   return (
@@ -18,7 +18,7 @@ const About = () => {
           transition={{ duration: 1, delay: 0.5 }}
           className="flex-shrink-0 mr-4"
         >
-          <Image
+          <img
             className="w-60 h-60 md:w-80 md:h-80 rounded-full object-cover mb-4 md:mb-0"
             style={{
               boxShadow: '0 0 5px rgba(255, 0, 0, 0.7), 0 0 10px rgba(0, 255, 0, 0.7), 0 0 15px rgba(0, 0, 255, 0.7)',
@@ -26,8 +26,7 @@ const About = () => {
             }}
             src="/portrait.png"
             alt="Profile"
-            width="1000"
-            height="1000"
+
           />
         </motion.div>
 
