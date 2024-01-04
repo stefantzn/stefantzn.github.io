@@ -254,6 +254,8 @@ const FirstTerm = () => {
         <img
           src="/ece150.jpg"
           alt="ECE150 Meme"
+          width={500}
+          height={500}
         />
       </motion.div>
 
