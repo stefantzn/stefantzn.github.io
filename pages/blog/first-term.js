@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Navbar from '../../components/Navbar';
 import { Helmet } from 'react-helmet';
+import Image from 'next/image'
 
 const FirstTerm = () => {
   const [scrolling, setScrolling] = useState(false);
@@ -64,7 +65,7 @@ const FirstTerm = () => {
         initial="hidden"
         animate="visible"
       >
-        <img
+        <Image
           src="/nightsky.jpeg"
           alt="Night Sky"
           width={500}
@@ -166,7 +167,7 @@ const FirstTerm = () => {
         initial="hidden"
         animate="visible"
       >
-        <img
+        <Image
           src="/hackathonteam.jpeg"
           alt="Hackathon Team"
           width={500}
@@ -193,7 +194,7 @@ const FirstTerm = () => {
       >
          <p className="text-xs mb-2 text-white text-justify">
 
-          Me and my roommate would end up doing the second Velocity Innovation Challenge that term with new team members,
+          My roommate and I would end up doing the second Velocity Innovation Challenge that term with new team members,
           but unfortunately we didn't get selected as a top 8 team. There were some really incredible projects to show for, so I'm
           not suprised, congratulations to the winners.
                 
@@ -250,7 +251,7 @@ const FirstTerm = () => {
         initial="hidden"
         animate="visible"
       >
-        <img
+        <Image
           src="/ece150.jpg"
           alt="ECE150 Meme"
           width={500}
