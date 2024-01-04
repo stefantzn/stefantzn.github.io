@@ -1,14 +1,21 @@
-
-/**@type {import('next').NextConfig}*/
- 
+/** @type {import('next').NextConfig} */
 const nextConfig = {
-  
-    output: "export",
+  exportPathMap: async function () {
+    const paths = {
+      '/': { page: '/' },
+      '/about': { page: '/about' },
+      '/404': { page: '/404' },
+      '/blog': { page: '/blog' },
+      '/blog/first-term': { page: '/blog/first-term' },
+    };
 
-  }
-  
-  module.exports = {
-    
-    nextConfig,
-    images: { unoptimized: true }
-  };
+    return paths;
+  },
+};
+
+module.exports = {
+  ...nextConfig,
+  images: {
+    unoptimized: true,
+  },
+};
