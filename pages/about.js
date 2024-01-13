@@ -50,7 +50,7 @@ const About = () => {
               📚 First Year Computer Engineering Student at the University of Waterloo
             </motion.li>
             <motion.li className="mb-3 whitespace-pre-line" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 2 }}>
-              🌱 Currently learning React and Embedded Programming with C
+              🌱 Currently learning Verilog and Embedded C
             </motion.li>
             <motion.li className="mb-3 whitespace-pre-line" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 2.5 }}>
               💼 Seeking Summer 2024 Internship Opportunities
