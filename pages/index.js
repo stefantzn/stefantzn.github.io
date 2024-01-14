@@ -96,7 +96,7 @@ const ContentWithFadeIn = ({ isFirstVisit }) => {
           <FaGithub size={40} />
         </a>
         <a
-          href="https://instagram.com/stefan.t17"
+          href="https://instagram.com/stefantzn"
           target="_blank"
           rel="noopener noreferrer"
           className="text-white hover:text-[#bc2a8d] transition duration-300"
