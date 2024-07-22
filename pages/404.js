@@ -1,5 +1,5 @@
-import Navbar from '../components/Navbar';
 import { Helmet } from 'react-helmet';
+import Link from 'next/link';
 
 const fourofour = () => {
   return (
@@ -7,11 +7,12 @@ const fourofour = () => {
       <Helmet>
         <title>Error 404</title>
       </Helmet>
-      <Navbar />
       <div className="flex flex-col items-center justify-center flex-grow">
         <div className="text-center text-white">
-          <h1 className="text-2xl md:text-4xl mb-2">Error 404: Page Not Found</h1>
-          <p className="text-xs md:text-sm mb-4">You seem rather, lost.</p>
+          <h1 className="text-2xl md:text-4xl mb-2">error 404: page not found</h1>
+          <p className="text-xs md:text-sm mb-4">
+        you seem rather lost. <Link href="/">return home?</Link>
+        </p>
         </div>
 
         <div className="flex items-center justify-center">
