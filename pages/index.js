@@ -93,7 +93,6 @@ const ContentWithFadeIn = ({ isFirstVisit }) => {
         </a>
         <a
           href="mailto:svtuczyn@uwaterloo.ca"
-          target="_blank"
           rel="noopener noreferrer"
           className="text-white hover:text-[#1DB954] transition duration-300"
         >
