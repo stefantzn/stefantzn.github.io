@@ -5,6 +5,7 @@ import { IoIosMail } from 'react-icons/io';
 import NET from 'vanta/dist/vanta.net.min';
 import Render from '../components/Render.js';
 
+
 const App = () => {
   const [loading, setLoading] = useState(true);
   const [vantaEffect, setVantaEffect] = useState(null);
@@ -64,45 +65,45 @@ const ContentWithFadeIn = ({ isFirstVisit }) => {
         <title>Stefan Tuczynski</title>
         <div className="background" id="vanta"></div>
         <div className="text-white flex items-center justify-center h-screen">
-          <div className="flex flex-row items-center justify-center">
-            <div className="text-center flex flex-col items-center">
+          <div className="content-container flex flex-col lg:flex-row items-center justify-center">
+            <div className="text-center flex flex-col items-center mb-6 lg:mb-0">
               <h1 className="text-6xl mb-4 gradient-text animate-gradient">Stefan Tuczynski</h1>
               <p className="text-lg">Computer Engineering Student @ University of Waterloo</p>
               <div className="flex items-center justify-center space-x-10 mt-4">
-              <a
-                href="https://www.linkedin.com/in/stefan-tuczynski/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white hover:text-[#0a66c2] transition duration-300 icon"
-              >
-                <FaLinkedin size={40} />
-              </a>
-              <a
-                href="https://github.com/stefantzn"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white hover:text-[#333] transition duration-300 icon"
-              >
-                <FaGithub size={40} />
-              </a>
-              <a
-                href="mailto:svtuczyn@uwaterloo.ca"
-                rel="noopener noreferrer"
-                className="text-white hover:text-[#1DB954] transition duration-300 icon"
-              >
-                <IoIosMail size={40} />
-              </a>
-              <a
-                href="/resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white hover:text-[#6c63ff] transition duration-300 icon"
-              >
-                <FaFileAlt size={40} />
-              </a>
+                <a
+                  href="https://www.linkedin.com/in/stefan-tuczynski/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white hover:text-[#0a66c2] transition duration-300 icon"
+                >
+                  <FaLinkedin size={40} />
+                </a>
+                <a
+                  href="https://github.com/stefantzn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white hover:text-[#333] transition duration-300 icon"
+                >
+                  <FaGithub size={40} />
+                </a>
+                <a
+                  href="mailto:svtuczyn@uwaterloo.ca"
+                  rel="noopener noreferrer"
+                  className="text-white hover:text-[#1DB954] transition duration-300 icon"
+                >
+                  <IoIosMail size={40} />
+                </a>
+                <a
+                  href="/resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white hover:text-[#6c63ff] transition duration-300 icon"
+                >
+                  <FaFileAlt size={40} />
+                </a>
+              </div>
             </div>
-            </div>
-            <div>
+            <div className="render-container">
               <Render />
             </div>
           </div>
@@ -113,4 +114,3 @@ const ContentWithFadeIn = ({ isFirstVisit }) => {
 };
 
 export default App;
-
