@@ -46,11 +46,10 @@ const ContentWithFadeIn = ({ isFirstVisit }) => {
   const [fadeIn, setFadeIn] = useState(false);
 
   useEffect(() => {
-    // Apply fade in effect only on the first visit
     if (isFirstVisit === 'false') {
       const fadeInTimeout = setTimeout(() => {
         setFadeIn(true);
-      }, 500); // Adjust the delay based on your preference
+      }, 500);
 
       return () => clearTimeout(fadeInTimeout);
     }
@@ -65,8 +64,8 @@ const ContentWithFadeIn = ({ isFirstVisit }) => {
         <title>Stefan Tuczynski</title>
         <div className="background" id="vanta"></div>
         <div className="text-white flex items-center justify-center h-screen">
-          <div className="content-container flex flex-col lg:flex-row items-center justify-center">
-            <div className="text-center flex flex-col items-center mb-6 lg:mb-0">
+          <div className="content-container">
+            <div className="text-container">
               <h1 className="text-6xl mb-4 gradient-text animate-gradient">Stefan Tuczynski</h1>
               <p className="text-lg">Computer Engineering Student @ University of Waterloo</p>
               <div className="flex items-center justify-center space-x-10 mt-4">
@@ -112,5 +111,6 @@ const ContentWithFadeIn = ({ isFirstVisit }) => {
     </div>
   );
 };
+
 
 export default App;
