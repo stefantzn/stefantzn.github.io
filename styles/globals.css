@@ -44,16 +44,27 @@ body {
 
 }
 
+/* App.css */
 .content-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
+}
+
+.text-container {
+  margin-bottom: 2rem; /* Adjust margin as needed */
 }
 
 @media (min-width: 1024px) {
   .content-container {
     flex-direction: row;
+    text-align: left;
+  }
+
+  .text-container {
+    margin-bottom: 0;
   }
 
   .render-container {
