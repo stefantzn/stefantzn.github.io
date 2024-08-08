@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import HashLoader from 'react-spinners/HashLoader';
 
 const LoadingPage = ({ color }) => {
+  
   const [show, setShow] = useState(true);
 
   useEffect(() => {

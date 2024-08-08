@@ -4,7 +4,7 @@
 
 body {
   background-color: #000000 ;
-  font-family: FreeMono, monospace, Helvetica, Arial, sans-serif;
+  font-family: ui-sans-serif, Arial, sans-serif;
   color: beige;
 }
 
@@ -18,4 +18,23 @@ body {
   100% {
       box-shadow: 0 0 5px #ffe7abf3;
   }
+}
+
+.gradient-text {
+  background-image: linear-gradient(to right,
+  #ff00f2,
+  #FFFFFF,
+  #00DFD8,
+  #FFFFFF,
+  #ff00f2,
+  #FFFFFF,
+  #00DFD8
+  
+  );
+
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+
 }
