@@ -69,38 +69,38 @@ const ContentWithFadeIn = ({ isFirstVisit }) => {
               <h1 className="text-6xl mb-4 gradient-text animate-gradient">Stefan Tuczynski</h1>
               <p className="text-lg">Computer Engineering Student @ University of Waterloo</p>
               <div className="flex items-center justify-center space-x-10 mt-4">
-                <a
-                  href="https://www.linkedin.com/in/stefan-tuczynski/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white hover:text-[#0a66c2] transition duration-300"
-                >
-                  <FaLinkedin size={40} />
-                </a>
-                <a
-                  href="https://github.com/stefantzn"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white hover:text-[#333] transition duration-300"
-                >
-                  <FaGithub size={40} />
-                </a>
-                <a
-                  href="mailto:svtuczyn@uwaterloo.ca"
-                  rel="noopener noreferrer"
-                  className="text-white hover:text-[#1DB954] transition duration-300"
-                >
-                  <IoIosMail size={40} />
-                </a>
-                <a
-                  href="/resume.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white hover:text-[#6c63ff] transition duration-300"
-                >
-                  <FaFileAlt size={40} />
-                </a>
-              </div>
+              <a
+                href="https://www.linkedin.com/in/stefan-tuczynski/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-[#0a66c2] transition duration-300 icon"
+              >
+                <FaLinkedin size={40} />
+              </a>
+              <a
+                href="https://github.com/stefantzn"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-[#333] transition duration-300 icon"
+              >
+                <FaGithub size={40} />
+              </a>
+              <a
+                href="mailto:svtuczyn@uwaterloo.ca"
+                rel="noopener noreferrer"
+                className="text-white hover:text-[#1DB954] transition duration-300 icon"
+              >
+                <IoIosMail size={40} />
+              </a>
+              <a
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-[#6c63ff] transition duration-300 icon"
+              >
+                <FaFileAlt size={40} />
+              </a>
+            </div>
             </div>
             <div>
               <Render />
