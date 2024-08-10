@@ -5,7 +5,6 @@ import { IoIosMail } from 'react-icons/io';
 import NET from 'vanta/dist/vanta.net.min';
 import Render from '../components/Render.js';
 
-
 const App = () => {
   const [loading, setLoading] = useState(true);
   const [vantaEffect, setVantaEffect] = useState(null);
@@ -15,21 +14,27 @@ const App = () => {
     const isFirstVisit = localStorage.getItem('isFirstVisit');
 
     if (isFirstVisit === null) {
-      // First visit
       localStorage.setItem('isFirstVisit', 'false');
       setLoading(true);
       setTimeout(() => {
         setLoading(false);
       }, 3000);
     } else {
-      // Not the first visit
       setLoading(false);
     }
 
-    NET({
-      el: '#vanta',
-    });
-  }, []);
+    if (!vantaEffect) {
+      setVantaEffect(
+        NET({
+          el: '#vanta',
+        })
+      );
+    }
+
+    return () => {
+      if (vantaEffect) vantaEffect.destroy();
+    };
+  }, [vantaEffect]);
 
   return (
     <div ref={myRef}>
@@ -44,6 +49,7 @@ const App = () => {
 
 const ContentWithFadeIn = ({ isFirstVisit }) => {
   const [fadeIn, setFadeIn] = useState(false);
+  const [rotation, setRotation] = useState(0);
 
   useEffect(() => {
     if (isFirstVisit === 'false') {
@@ -55,6 +61,16 @@ const ContentWithFadeIn = ({ isFirstVisit }) => {
     }
   }, [isFirstVisit]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setRotation(window.scrollY / 2); // Adjust rotation speed here
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <div
       className={`opacity-0 ${fadeIn ? 'opacity-100' : ''}`}
@@ -64,8 +80,9 @@ const ContentWithFadeIn = ({ isFirstVisit }) => {
         <title>Stefan Tuczynski</title>
         <div className="background" id="vanta"></div>
         <div className="text-white flex items-center justify-center h-screen">
-          <div className="content-container">
-            <div className="text-container">
+          {/* Split the screen into two halves */}
+          <div className="w-1/2 flex justify-center items-center">
+            <div className="text-container text-center">
               <h1 className="text-6xl mb-4 gradient-text animate-gradient">Stefan Tuczynski</h1>
               <p className="text-lg">Computer Engineering Student @ University of Waterloo</p>
               <div className="flex items-center justify-center space-x-10 mt-4">
@@ -102,7 +119,9 @@ const ContentWithFadeIn = ({ isFirstVisit }) => {
                 </a>
               </div>
             </div>
-            <div className="render-container">
+          </div>
+          <div className="w-1/2 flex justify-center items-center">
+            <div className="render-container" style={{ transform: `rotate(${rotation}deg)` }}>
               <Render />
             </div>
           </div>
@@ -111,6 +130,5 @@ const ContentWithFadeIn = ({ isFirstVisit }) => {
     </div>
   );
 };
-
 
 export default App;

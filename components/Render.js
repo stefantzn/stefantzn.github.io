@@ -80,7 +80,7 @@ const Render = () => {
     };
   }, [objToRender]); // Dependency array to re-run if objToRender changes
 
-  return <div ref={mountRef} style={{ height: '100vh', width: '50vw' }}></div>; // Adjust size to fit your layout
+  return <div ref={mountRef} style={{ height: '100vh', width: '40vw' }}></div>; // Adjust size to fit your layout
 };
 
 export default Render;
